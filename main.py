@@ -45,8 +45,9 @@ def get_num(num_order: str):
 
     try:
         num = float(num)
-    except TypeError:
-        return 0
+    except ValueError:
+        print("Invalid number. Try again.")
+        return get_num(num_order)
     return num
 
 
